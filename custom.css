@@ -1,0 +1,921 @@
+@import url(https://github.backroomswiki.cn/Super_Liminal/css/super-liminal.css);
+
+/*分隔符*/
+
+/*根*/
+:root {
+    --header-title: "VTuber Wiki";
+    --header-subtitle: "虚拟主播中文维基";
+    --rename-option: "删除页面？尝试移到归档delete:页面以代替。";
+    --logo-image: url("http://vtuber.wikidot.com/local--files/home/logo.png") !important;
+
+    /* Thread Colors */
+    --thread-accent-color: var(--background-color);
+    --dark-accent: var(--dark-color-2);
+
+    --bb-white: var(--background-color);
+    --bb-black: var(--text-color);
+
+    /* 暗色模式链接颜色 */
+    --link-color: 140, 180, 240;
+    --hover-link-color: 100, 200, 230;
+    --visited-link-color: 180, 150, 220;
+    --newpage-color: 120, 150, 240;
+
+    /* 暗色模式基础颜色 */
+    --text-color: 220, 220, 240;
+    --background-color: 20, 22, 27;
+    --light-color-2: 40, 44, 52;
+    --dark-color-2: 30, 33, 39;
+    --dark-color-3: 15, 17, 21;
+    --dark-color-4: var(--dark-color-3);
+    --general-light-background-color: var(--light-color-2);
+    --general-light-text-color: var(--text-color);
+    --general-medium-background-color: var(--dark-color-2);
+    --general-medium-text-color: var(--text-color);
+    --general-dark-background-color: var(--dark-color-3);
+    --general-dark-text-color: 240, 240, 250;
+
+    /* 头部区域 */
+    --header-background-bottom: var(--light-color-2);
+    --header-background-top: var(--light-color-2), 0.8;
+    --header-extra-background-image: none;
+    --header-text-color: 220, 220, 240;
+    --header-text-shadow-color: 0, 0, 0, 0;
+    --topbar-text-color: 200, 200, 220;
+    --topbar-hover-text-color: 240, 240, 255;
+    --header-username-color: 200, 200, 220;
+    --account-button-text-color: 220, 220, 240;
+    --account-button-hover-text-color: 255, 255, 255;
+    --account-button-background-color: var(--dark-color-3);
+    --account-drop-hover-background-color: var(--light-color-1);
+
+    /* 页面元素 */
+    --page-title-border-color: var(--dark-color-2);
+    --sidebar-title-background-color: var(--dark-color-2);
+    --sidebar-title-text-color: 220, 220, 240;
+    --sidebar-title-shadow-color: 0, 0, 0, 0;
+    --sidebar-media-background-color: var(--light-color-2);
+    --sidebar-hover-background-color: var(--light-color-2);
+    --hr-color: var(--dark-color-2);
+    --popup-loading-color: var(--dark-color-3);
+    --scrollbar-color: var(--dark-color-3);
+    --scrollbar-background-color: var(--light-color-2);
+    --page-option-background-color: var(--light-color-2);
+}
+
+#side-bar .side-block.media a img {
+    position: relative;
+    transform: translateX(0);
+}
+
+#header {
+    box-shadow:
+        0px 0px 8.5px -1px rgba(var(--general-shadow-color), 0.42),
+        0px 0px 68px -21px rgba(var(--general-shadow-color), 0.1)
+}
+#header h2 span::before {
+    opacity: 0.1;
+}
+
+#toc .title,#toc #toc-action-bar{
+    text-shadow: 0 0 10px rgb(var(--dark-color-3));
+}
+
+/*防讨论区炸站*/
+.thread-container .post .content *[style*=position] {
+    position: static !important;
+}
+
+.thread-container .post .content *[style*=margin] {
+    margin: 0 !important;
+}
+
+.thread-container .post .content *[style*=padding] {
+    padding: 0 !important;
+}
+
+.thread-container .post .content:has(*[style*="position"]){
+    filter: drop-shadow(2px 4px 6px red) !important;
+}
+
+div[style*="fixed"], span[style*="fixed"]{
+    display: none !important;
+}
+
+.thread-container .post .head {
+    background-color: transparent;
+}
+
+/*论坛图片优化*/
+.post-container .long .content img {
+  filter: drop-shadow(0 4px 8px rgba(var(--text-color), 0.15));
+}
+
+/*==各种div==*/
+blockquote , .lightblock , .方框块 , .歌词 {
+    background: rgba(var(--lightblock-background-color));
+    color: rgba(var(--lightblock-text-color));
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border: rgba(var(--text-color),0.4) solid 1.5px;
+}
+
+.歌词 {
+    /*text-indent: 2em;*/
+    border-radius: 8px;
+    line-height: 2;
+}
+
+.歌词 em{
+font-weight: 200;
+}
+
+.styled-quote , .样式块 {
+    background: rgba(var(--styled-quote-background-color));
+    color: rgba(var(--styled-quote-text-color));
+    border-left: rgba(var(--styled-quote-border-color)) solid 0.6rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.radius-div .lightblock {
+    border: 2px solid rgba(var(--dark-color-2),0.8);
+    border-radius: 10px;
+}
+
+/*其他*/
+
+.styled-hr {
+    margin: 1em 0;
+    padding: 0;
+    display: block;
+    position: relative;
+    height: 0.15em;
+    overflow: hidden;
+    border: initial;
+    background-color: rgb(var(--text-color));
+    -webkit-clip-path: polygon(50% 10%, 100% 50%, 50% 90%, 0% 50%);
+    clip-path: polygon(50% 10%, 100% 50%, 50% 90%, 0% 50%);
+}
+
+.darkblock{
+    --text-color: var(--darkblock-text-color);
+    --background-color: var(--darkblock-background-color);
+
+--link-color: var(--visited-link-color);
+}
+
+a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *) {
+    display: inline-block;
+    transition: background-color 300ms;
+    color: rgb(var(--text-color));
+    text-decoration: none !important;
+}
+
+a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *) {
+    padding-right: 0.4em;
+}
+
+.collapsible-block {
+    margin: 1em 0;
+}
+
+#toc-action-bar>a {
+    width: 100%;
+}
+
+a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *):hover {
+    color: rgb(var(--text-color));
+}
+
+.collapsible-block-folded a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *)::before,
+.collapsible-block-unfolded-link a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *)::before {
+    margin: 0 0.2em 0 0.4em;
+    content: "▼";
+    color: rgb(var(--text-color));
+    background-color: transparent;
+    visibility: visible;
+    display: inline-block;
+}
+
+.collapsible-block-folded a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *):hover::before,
+.collapsible-block-unfolded-link a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *):hover::before {
+    color: rgb(var(--text-color));
+}
+
+.collapsible-block-folded a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *)::before {
+    animation-name: collapsible-arrow-spin;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.32, .38, .39, .94);
+    animation-fill-mode: forwards;
+}
+
+.collapsible-block-unfolded-link a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *)::before {
+    animation-name: collapsible-arrow-spin-back;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.32, .38, .39, .94);
+    animation-fill-mode: forwards;
+}
+
+@keyframes collapsible-arrow-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes collapsible-arrow-spin-back {
+    from {
+        transform: rotate(-90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.darkblock .styled-collap *{
+    color: rgb(var(--darkblock-text-color)) !important;
+    background-color: rgb(var(--darkblock-background-color)) !important;
+}
+
+/*修暗色版式颜色黑色的问题*/
+span.hl-brackets,span.hl-code{color: rgb(var(--text-color));}
+
+  /*===================== ===*/
+ /*======特殊折叠·鬼图组件======*/
+/*========================*/
+.styled-collap .collapsible-block {
+    margin: 0.5rem 0;
+}
+
+.styled-collap a.collapsible-block-link {
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem 0.5rem;
+    background-color: rgb(var(--darkblock-background-color));
+    color: rgb(var(--darkblock-text-color));
+}
+
+.styled-collap .collapsible-block-content {
+    padding: 0.01rem 1rem;
+    background-color: rgb(var(--background-color));
+    border: unset !important;
+    border-top: none;
+}
+
+.styled-collap .collapsible-block-folded a.collapsible-block-link::before {
+    margin: 0 0.2em 0 0.4em;
+    content: "▶";
+    color: rgb(var(--darkblock-text-color));
+    background-color: transparent;
+    display: inline-block;
+}
+
+.styled-collap .collapsible-block-unfolded a.collapsible-block-link::before {
+    margin: 0 0.2em 0 0.4em;
+    content: "▼";
+    color: rgb(var(--darkblock-text-color));
+    background-color: transparent;
+    visibility: visible;
+    display: inline-block;
+}
+
+/*表格*/
+
+tr td{
+overflow-x：auto；
+}
+
+/*链接不换行修复*/
+
+#page-content a , .hovertip .content .footnote .f-content a  {word-wrap: break-word;}
+
+/*======修链接颜色======*/
+
+span[style*="color:"] a {
+  position: relative;
+}
+
+span[style*="color:"] a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+}
+
+span[style*="color: green"] a{
+color: #5cb85c !important;
+}
+
+span[style*="color: green"] a::before{
+background-color: #5cb85c;
+}
+
+span[style*="color: red"] a{
+color: #ee3131 !important;
+}
+
+span[style*="color: red"] a::before{
+background-color: #ee3131;
+}
+
+span[style*="color: yellow"] a,span[style*="color: orange"] a{
+color: orange !important;
+}
+
+span[style*="color: yellow"] a::before,span[style*="color: orange"] a::before{
+background-color: orange;
+}
+
+/*======因为我，H_W，色弱，屁都看不清，所以我要强制把这些颜色改明显点======*/
+
+span[style*="color: green"]{
+color: #5cb85c !important;
+}
+
+span[style*="color: red"]{
+color: #ee3131 !important;
+}
+
+/*暂时设定文章内不显示评分*/
+
+#page-content .page-rate-widget-box{display:none;}
+
+/*目录滚动条*/
+
+#toc-list{
+    max-height: 300px;
+    overflow: auto;
+}
+
+/*横线*/
+
+#page-content h1 {
+    border-bottom: 1px solid #777;
+    padding-bottom: 2px;
+    padding-top: 25px;
+    display:flex;
+}
+
+/*=删除保存草稿=*/
+
+#edit-save-draft-button{
+    display:none !important;
+}
+
+/*页面跳转滚动动画*/
+
+html{
+scroll-behavior:smooth;
+}
+
+/*  =给加脚注上高光（划）文字阴影=  */
+#page-content .footnote-footer:target{
+    text-shadow: 0px 0px 5px rgb(var(--text-color));
+}
+
+/*  =参考文献块样式=  */
+#page-content .bibitems{
+    border-left: solid 0.4rem rgb(var(--text-color));
+    margin-top: 1rem;
+    padding-left: 1em;
+    width: 95%;
+}
+
+#page-content .bibitems .title{
+    margin: 0.5em 0.5em;
+    font-size: 130%;
+}
+
+/* =隐藏脚注下方那行字= */
+
+#odialog-hovertips .hovertip .content .f-footer {
+  display: none;
+}
+
+/* =脚注块英文标题改中文= */
+
+#page-content .footnotes-footer .title{
+    visibility: hidden;
+}
+
+#page-content .footnotes-footer .title:before{
+    visibility: initial;
+    content: "脚注";
+    font-size: 120%;
+}
+
+/*==脚注、伪脚注、参考文献上标加方括号==*/
+
+a.bibcite:before, a.footnoteref:before , #page-content sup a:before {
+     content: "[";
+}
+a.bibcite:after, a.footnoteref:after , #page-content sup a:after {
+     content: "]";
+}
+
+/*修弹窗*/
+
+.owindow .content {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+div#odialog-shader.odialog-shader{
+    display: none !important;
+}
+
+/*==更好的Ruby==*/
+@supports selector(:has(*)) {
+    #page-content tt:has(sup) {
+      font-family: var(--body-font, var(--page-font, arial, helvetica, sans-serif));
+      font-size: 1em;
+      display: inline-table;
+      text-align: center;
+      white-space: nowrap;
+      line-height: 1;
+      height: 1em;
+      vertical-align: calc(1em - 1px);
+      text-indent: 0%;
+    }
+
+    #page-content tt:has(sup) > sup {
+      display: table-header-group;
+      font-size: 0.6em;
+      line-height: 1.1;
+      text-align: center;
+      white-space: pre;
+    }
+
+}
+
+@supports not(selector(:has(*))) {
+    #page-content tt > sup {
+      display: table-header-group;
+      font-size: 0.6em;
+      line-height: 1.1;
+      text-align: center;
+      white-space: pre;
+    }
+    #page-content tt > sup:before {
+      content: "（";
+    }
+
+    #page-content tt > sup:after {
+      content: "）";
+    }
+}
+
+/*---- 粘性toc ----*/
+/*代码基于SCP基金会 报纸 版式修改*/
+/*https://scp-wiki-cn.wikidot.com/theme:newspaper*/
+/*作者MalyceGraves*/
+/*基于CC BY-SA 3.0协议使用*/
+
+.anchor {
+    position: sticky;
+    height:0;
+    top: 0.5rem;
+    z-index: 4;
+}
+.tocbox {
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: max(-18.75rem, -17vw);
+    z-index: 4;
+    box-sizing: border-box;
+    width: max-content;
+    pointer-events: none;
+}
+
+#page-content .tocbox .toc-u {
+    padding: 0.5rem;
+    background: rgb(var(--background-color));
+    box-shadow: 0 0 4px rgba(var(--text-color),0.3);
+    border-right: solid 0.2rem rgb(var(--darkblock-background-color));
+    position: relative;
+    width: 15rem;
+    max-height: calc(98vh - 2rem);
+    max-width: calc((30vw - 50% - 6rem)/1.2);
+    margin-right: 0; margin-left: auto;
+    pointer-events: all;
+}
+.toc-u #toc::before, .toc-u #toc::after { display: none; }
+.toc-u::before, .toc-u::after {
+    content: "";
+    display: block;
+    height: 0.5rem; width: 0.5rem;
+    position: absolute;
+    right: 0;
+    background-color: rgb(var(--darkblock-background-color));
+}
+.toc-u::before {
+    top: 0;
+    transform: translate(calc(0.1rem + 50%),-50%) rotate(45deg);
+}
+.toc-u::after {
+    bottom: 0;
+    transform: translate(calc(0.1rem + 50%),50%) rotate(45deg);
+}
+
+#page-content .tocbox .toc-u #toc-list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 84vh;
+    padding: 0 0.5em 1em;
+    scrollbar-width: thin;
+}
+#page-content .tocbox .toc-u #toc-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tocbox table,
+.tocbox tbody,
+.tocbox tr,
+.tocbox td,
+.tocbox #toc {
+    display: contents;
+}
+
+@media (max-width: 1340px) {
+    .anchor {
+        filter: none;
+        transition: filter 0.2s ease-out;
+        top: 4.1rem;
+     }
+    .tocbox {
+        right: -1rem;
+        width: unset;
+    }
+    .tocbox::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: transparent;
+        width: 1.5rem; height: 100%;
+        top: 0; right: -0.25rem;
+        pointer-events: all;
+}
+    .tocbox::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: transparent;
+
+        width: 0; height: 0;
+        border: solid 1rem transparent;
+        border-left-width: 0.5rem;
+        border-right-color: rgb(var(--darkblock-background-color));
+
+        top: calc(50% - 1rem); right: 0;
+        pointer-events: all;
+        transition: border-right-width 0.15s ease-out;
+    }
+    #page-content .tocbox .toc-u {
+        width: -moz-fit-content;
+        width: fit-content;
+        max-width: 60vw;
+        box-shadow: 0 0 4px rgba(var(--text-color),0.3);
+        clip-path: inset(-0.5rem -0.5rem -0.5rem calc(100% - 0.65rem));
+        transition: clip-path 0.2s ease-out;
+        pointer-events: none;
+    }
+
+    .anchor:hover { filter: drop-shadow(0px 0px 3px rgba(var(--text-color),0.2)); }
+    .tocbox:hover {
+        pointer-events: all;
+    }
+    .tocbox:hover::after {
+        border-right-width: 0;
+    }
+    #page-content .tocbox:hover .toc-u {
+        pointer-events: all;
+        clip-path: inset(-0.5rem -0.5rem -0.5rem -0.35rem);
+    }
+
+}
+
+@supports selector(:has(*)) {
+    .anchor{display:none;}
+
+    .anchor:has(#toc-list a) {
+        display:block;
+    }
+}
+
+.anchor #toc-list{
+    max-height: 50vh !important;
+    overflow: auto;
+}
+
+/*==图片不是存本站附件区的，左上角显示个链接的图标==*/
+
+@supports selector(:has(*)) {
+
+.scp-image-block, .gallery-grid-box .gallery-item td {
+    position: relative;
+}
+
+.scp-image-block::before, .gallery-grid-box .gallery-item td a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url(https://lostmedia.wikidot.com/local--files/component:link-icon/vaadin_link.png);
+    background-size: cover;
+    filter: contrast(0.5) drop-shadow(0px 0.5px 2px white) drop-shadow(0px -0.5px 2px white) drop-shadow(0.5px 0px 2px white) drop-shadow(-0.5px 2px 0px white) drop-shadow(0px 0px 5px gray);
+    z-index: 3;
+}
+
+.gallery-grid-box .gallery-item td a::before {
+    left: 14px;
+}
+
+@media only screen and (max-width: 800px) {
+    .gallery-grid-box .gallery-item td a::before {
+        left: 26px;
+    }
+}
+
+.scp-image-block:has(img[src*="lostmedia.wdfiles.com/local--"])::before,
+.scp-image-block:has(img[src*="lostmedia.wikidot.com/local--"])::before,
+.gallery-grid-box .gallery-item td a[href*="lostmedia.wdfiles.com"]::before,
+.gallery-grid-box .gallery-item td a[href*="lostmedia.wikidot.com"]::before {
+    width: 0;
+    height: 0;
+    background-image: none !important;
+}
+
+}
+
+/*==编辑区域加边框==*/
+
+#edit-page-form input.text,#edit-page-form textarea#edit-page-textarea,#edit-page-form textarea#edit-page-comments{
+    border: 1px solid rgba(var(--text-color),0.4);
+}
+
+/*==修表格过长，加滚动==*/
+
+#page-content table.wiki-content-table{
+    width: 100%;
+    max-width: calc(100vw - 3.2rem);
+    table-layout: auto;
+    overflow-x: auto;
+    display: block;
+}
+
+/*==讨论区==*/
+
+.long {
+margin-left: 0;
+border:none !important;
+background-color: rgb(var(--background-color))
+color: rgb(var(--text-color));
+border-radius: 0%;
+}
+
+#page-content .comments-box #comments-options-hidden a , #page-content .comments-box #comments-options-shown a{
+    background: rgba(var(--dark-color-2)) !important;
+    color: rgba(var(--text-color)) !important;
+    padding: 2px 4px 2px 4px;
+    border-radius: 5px;
+}
+
+.post .signature{display:none;}
+
+form#new-post-form {
+    background-color: rgba(var(--edit-area-background-color));
+    color: rgba(var(--edit-area-text-color));
+    padding: 1rem 2rem;
+}
+
+#new-post-form .form {
+    margin: 0 !important;
+    width: 100%;
+}
+
+#new-post-form .form td:first-child {
+    display: none;
+}
+
+#new-post-form .form td:last-child {
+    padding: 0;
+}
+
+#new-post-div input.text {
+    border: 1px solid rgba(var(--text-color),0.4) !important;
+    color: rgba(var(--edit-area-textarea-text-color));
+    background: rgba(var(--edit-area-textarea-background-color));
+    margin: 0;
+    padding: 0.2em 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: box-shadow var(--general-transition-time-slow);
+    font-weight: 900;
+}
+
+#new-post-div textarea#np-text {
+    width: 100% !important;
+    color: rgba(var(--edit-area-textarea-text-color));
+    background: rgba(var(--edit-area-textarea-background-color));
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid rgba(var(--text-color),0.4) !important;
+    transition: box-shadow var(--general-transition-time-slow);
+}
+
+#new-post-div input.text:focus-visible,
+#new-post-div textarea#np-text:focus-visible {
+    box-shadow: 2px 2px 0 rgba(var(--edit-area-textarea-border-color)), -2px 2px 0 rgba(var(--edit-area-textarea-border-color)), -2px -2px 0 rgba(var(--edit-area-textarea-border-color)), 2px -2px 0 rgba(var(--edit-area-textarea-border-color));
+}
+
+.printuser.avatarhover a:nth-of-type(1):after { display: none; }
+
+.long {
+border:none !important;
+}
+
+form#new-post-form {
+    background-color: rgba(var(--edit-area-background-color));
+    color: rgba(var(--edit-area-text-color));
+    padding: 1rem 2rem;
+}
+
+#new-post-form .form {
+    margin: 0 !important;
+    width: 100%;
+}
+
+#new-post-form .form td:first-child {
+    display: none;
+}
+
+#new-post-form .form td:last-child {
+    padding: 0;
+}
+
+#new-post-div input.text {
+    border: none;
+    color: rgba(var(--edit-area-textarea-text-color));
+    background: rgba(var(--edit-area-textarea-background-color));
+    margin: 0;
+    padding: 0.2em 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: box-shadow var(--general-transition-time-slow);
+    font-weight: 900;
+}
+
+#new-post-div textarea#np-text {
+    width: 100% !important;
+    color: rgba(var(--edit-area-textarea-text-color));
+    background: rgba(var(--edit-area-textarea-background-color));
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    transition: box-shadow var(--general-transition-time-slow);
+}
+
+#new-post-div input.text:focus-visible,
+#new-post-div textarea#np-text:focus-visible {
+    box-shadow: 2px 2px 0 rgba(var(--edit-area-textarea-border-color)), -2px 2px 0 rgba(var(--edit-area-textarea-border-color)), -2px -2px 0 rgba(var(--edit-area-textarea-border-color)), 2px -2px 0 rgba(var(--edit-area-textarea-border-color));
+}
+
+.wd-editor-toolbar-panel {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.5rem;
+}
+
+.wd-editor-toolbar-panel div {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+}
+
+.wd-editor-toolbar-panel div > ul {
+    display: contents;
+}
+
+.wd-editor-toolbar-panel div > ul li {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+}
+
+.wd-editor-toolbar-panel div > ul > li.hseparator {
+    display: none;
+}
+
+.wd-editor-toolbar-panel ul li:hover ul {
+    border: 2px solid rgba(var(--edit-area-hover-button-background-color));
+}
+
+.wd-editor-toolbar-panel ul li a {
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--edit-area-button-background-color));
+    transition: background var(--general-transition-time-fast);
+}
+
+.wd-editor-toolbar-panel ul li a:is(:hover, :active, :focus, :focus-within) {
+    background: rgba(var(--edit-area-hover-button-background-color));
+}
+
+.wd-editor-toolbar-panel ul li a::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: var(--edit-area-toolbar-icon-mask);
+            mask-image: var(--edit-area-toolbar-icon-mask);
+    background: rgba(var(--edit-area-button-text-color));
+    -webkit-mask-position: center;
+            mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-size: 75%;
+            mask-size: 75%;
+}
+
+.wd-editor-toolbar-panel ul li a:is(:hover, :active, :focus, :focus-within)::before {
+    background: rgba(var(--edit-area-hover-button-text-color));
+}
+
+/*别的修复*/
+
+table.form td input {
+    border: 2px solid rgba(var(--text-color),0.4);
+}
+
+#edit-post-form input.form-control , #edit-post-form textarea#np-text{
+width: 100%;
+}
+
+#edit-page-form.form-horizontal.data-form input,#edit-page-form.form-horizontal.dataform textarea{
+max-width:60vw;
+overflow-x:auto;
+}
+
+/*未登陆黑条*/
+
+tt sub {
+  font-family: var(--body-font, var(--page-font, arial, helvetica, sans-serif));
+  font-size: inherit;
+  font-style: normal;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+tt sub {
+  font-size: 0;
+  color: transparent;
+  display: inline-block;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  line-height: 1;
+}
+
+tt sub::before {
+  content: "███";
+  font-size: var(--content-font-size);
+  color: rgb(var(--darkblock-background-color));
+}
+
+/*打印*/
+
+@media print{
+
+.dark-mode-button , .top-info , .bilibili-player-a , .iframe-container , .tags-tool , .comments-box , .license-area{
+display:none !important;
+}
+
+}
+
+/*修复手机端横向溢出*/
+#skrollr-body{
+overflow-x:clip;
+}
