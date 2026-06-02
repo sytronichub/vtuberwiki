@@ -2,7 +2,7 @@
 
 /*分隔符*/
 
-/*根*/
+/*根 - 浅色模式，主题色浅蓝色*/
 :root {
     --header-title: "VTuber Wiki";
     --header-subtitle: "虚拟主播中文维基";
@@ -16,50 +16,50 @@
     --bb-white: var(--background-color);
     --bb-black: var(--text-color);
 
-    /* 暗色模式链接颜色 */
-    --link-color: 140, 180, 240;
-    --hover-link-color: 100, 200, 230;
-    --visited-link-color: 180, 150, 220;
-    --newpage-color: 120, 150, 240;
+    /* 浅色模式链接颜色（浅蓝色系） */
+    --link-color: 74, 144, 226;      /* #4a90e2 */
+    --hover-link-color: 100, 170, 240;
+    --visited-link-color: 150, 120, 200;
+    --newpage-color: 200, 80, 80;
 
-    /* 暗色模式基础颜色 */
-    --text-color: 220, 220, 240;
-    --background-color: 20, 22, 27;
-    --light-color-2: 40, 44, 52;
-    --dark-color-2: 30, 33, 39;
-    --dark-color-3: 15, 17, 21;
+    /* 浅色模式基础颜色 */
+    --text-color: 51, 51, 51;        /* #333333 */
+    --background-color: 255, 255, 255; /* 纯白背景 */
+    --light-color-2: 245, 245, 250;   /* 极浅灰蓝 */
+    --dark-color-2: 230, 230, 240;    /* 浅灰色 */
+    --dark-color-3: 200, 200, 210;    /* 中灰色 */
     --dark-color-4: var(--dark-color-3);
     --general-light-background-color: var(--light-color-2);
     --general-light-text-color: var(--text-color);
     --general-medium-background-color: var(--dark-color-2);
     --general-medium-text-color: var(--text-color);
     --general-dark-background-color: var(--dark-color-3);
-    --general-dark-text-color: 240, 240, 250;
+    --general-dark-text-color: 51, 51, 51;
 
     /* 头部区域 */
     --header-background-bottom: var(--light-color-2);
-    --header-background-top: var(--light-color-2), 0.8;
+    --header-background-top: var(--light-color-2), 0.9;
     --header-extra-background-image: none;
-    --header-text-color: 220, 220, 240;
+    --header-text-color: 40, 40, 50;      /* 深色文字 */
     --header-text-shadow-color: 0, 0, 0, 0;
-    --topbar-text-color: 200, 200, 220;
-    --topbar-hover-text-color: 240, 240, 255;
-    --header-username-color: 200, 200, 220;
-    --account-button-text-color: 220, 220, 240;
-    --account-button-hover-text-color: 255, 255, 255;
-    --account-button-background-color: var(--dark-color-3);
-    --account-drop-hover-background-color: var(--light-color-1);
+    --topbar-text-color: 60, 60, 70;
+    --topbar-hover-text-color: 74, 144, 226; /* 浅蓝色 */
+    --header-username-color: 60, 60, 70;
+    --account-button-text-color: 60, 60, 70;
+    --account-button-hover-text-color: 74, 144, 226;
+    --account-button-background-color: 240, 240, 245;
+    --account-drop-hover-background-color: 230, 230, 240;
 
     /* 页面元素 */
     --page-title-border-color: var(--dark-color-2);
-    --sidebar-title-background-color: var(--dark-color-2);
-    --sidebar-title-text-color: 220, 220, 240;
+    --sidebar-title-background-color: var(--light-color-2);
+    --sidebar-title-text-color: 40, 40, 50;
     --sidebar-title-shadow-color: 0, 0, 0, 0;
     --sidebar-media-background-color: var(--light-color-2);
-    --sidebar-hover-background-color: var(--light-color-2);
+    --sidebar-hover-background-color: 235, 235, 245;
     --hr-color: var(--dark-color-2);
     --popup-loading-color: var(--dark-color-3);
-    --scrollbar-color: var(--dark-color-3);
+    --scrollbar-color: 180, 180, 200;
     --scrollbar-background-color: var(--light-color-2);
     --page-option-background-color: var(--light-color-2);
 }
@@ -71,8 +71,8 @@
 
 #header {
     box-shadow:
-        0px 0px 8.5px -1px rgba(var(--general-shadow-color), 0.42),
-        0px 0px 68px -21px rgba(var(--general-shadow-color), 0.1)
+        0px 0px 8.5px -1px rgba(var(--general-shadow-color), 0.12),
+        0px 0px 68px -21px rgba(var(--general-shadow-color), 0.05)
 }
 #header h2 span::before {
     opacity: 0.1;
