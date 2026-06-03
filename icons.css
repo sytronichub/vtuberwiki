@@ -3,16 +3,16 @@ a[href^="http://"]::after,
 a[href^="https://"]::after {
     content: "";
     display: inline-block;
-    width: 16px;
+    /*width: 16px;
     height: 16px;
-    /*margin-left: 0px;*/
+    margin-left: 0px;*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     vertical-align: middle;
 }
 
-/* 示例：为 bilibili.com 域名添加图标 */
+/* 为 bilibili.com 域名添加图标 */
 a[href*="//.bilibili.com/"]::after {
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/bilibili.png");
 }
