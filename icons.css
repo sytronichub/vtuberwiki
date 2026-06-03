@@ -1,18 +1,4 @@
-/* 通用外部链接样式：给所有外部链接后面留出一点间距 */
-a[href^="http://"]::after,
-a[href^="https://"]::after {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-left: 6px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    vertical-align: middle;
-}
-
-/* 示例：为 google.com 域名添加图标 */
+/* 为 google.com 域名添加图标 */
 a[href^="https://www.bilibili.com"]::after,
 a[href^="http://www.bilibili.com"]::after,
 a[href^="https://bilibili.com"]::after,
