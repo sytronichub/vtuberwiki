@@ -3,12 +3,30 @@ a[href^="https://www.bilibili.com"]::after,
 a[href^="http://www.bilibili.com"]::after,
 a[href^="https://bilibili.com"]::after,
 a[href^="http://bilibili.com"]::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/bilibili.png");
 }
 
 /* 为 github.com 添加图标 */
 a[href^="https://baidu.com"]::after,
 a[href^="http://baidu.com"]::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/baidu.png");
 }
 
@@ -17,6 +35,15 @@ a[href^="https://www.youtube.com"]::after,
 a[href^="http://www.youtube.com"]::after,
 a[href^="https://youtube.com"]::after,
 a[href^="http://youtube.com"]::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/youtube.png");
 }
 
