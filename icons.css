@@ -1,5 +1,5 @@
 /* 为 bilibili.com 域名添加图标 */
-a[href*="//*.bilibili.com/"]::after {
+a[href*="//bilibili.com/"]::after {
     content: "";
     display: inline-block;
     width: 16px;
@@ -13,7 +13,7 @@ a[href*="//*.bilibili.com/"]::after {
 }
 
 /* 为 baidu.com 添加图标 */
-a[href*="//*.baidu.com"]::after {
+a[href*="//baidu.com"]::after {
     content: "";
     display: inline-block;
     width: 16px;
@@ -27,7 +27,7 @@ a[href*="//*.baidu.com"]::after {
 }
 
 /* 为 youtube.com 添加图标 */
-a[href*="//*.youtube.com"]::after {
+a[href*="//youtube.com"]::after {
     content: "";
     display: inline-block;
     width: 16px;
