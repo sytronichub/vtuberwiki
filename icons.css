@@ -1,5 +1,8 @@
 /* 为 bilibili.com 域名添加图标 */
-a[href*="//bilibili.com/"]::after {
+a[href^="https://bilibili.com/"]::after,
+a[href^="http://bilibili.com/"]::after,
+a[href^="https://www.bilibili.com/"]::after,
+a[href^="http://www.bilibili.com/"]::after {
     content: "";
     display: inline-block;
     width: 16px;
@@ -13,7 +16,12 @@ a[href*="//bilibili.com/"]::after {
 }
 
 /* 为 baidu.com 添加图标 */
-a[href*="//baidu.com"]::after {
+a[href^="https://baidu.com/"]::after,
+a[href^="http://baidu.com/"]::after,
+a[href^="https://www.baidu.com/"]::after,
+a[href^="http://www.baidu.com/"]::after,
+a[href^="https://tieba.baidu.com/"]::after,
+a[href^="http://tieba.baidu.com/"]::after {
     content: "";
     display: inline-block;
     width: 16px;
@@ -27,7 +35,10 @@ a[href*="//baidu.com"]::after {
 }
 
 /* 为 youtube.com 添加图标 */
-a[href*="//youtube.com"]::after {
+a[href^="https://youtube.com/"]::after,
+a[href^="http://youtube.com/"]::after,
+a[href^="https://www.youtube.com/"]::after,
+a[href^="http://www.youtube.com/"]::after {
     content: "";
     display: inline-block;
     width: 16px;
