@@ -1,29 +1,42 @@
-/* 通用外部链接样式：给所有外部链接后面留出一点间距 */
-a[href^="http://"]::after,
-a[href^="https://"]::after {
+/* 为 bilibili.com 域名添加图标 */
+a[href*="//*.bilibili.com/"]::after {
     content: "";
     display: inline-block;
-    /*width: 16px;
+    width: 16px;
     height: 16px;
-    margin-left: 0px;*/
+    margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     vertical-align: middle;
-}
-
-/* 为 bilibili.com 域名添加图标 */
-a[href*="//.bilibili.com/"]::after {
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/bilibili.png");
 }
 
 /* 为 baidu.com 添加图标 */
-a[href*="//.baidu.com"]::after {
+a[href*="//*.baidu.com"]::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/baidu.png");
 }
 
 /* 为 youtube.com 添加图标 */
-a[href*="//.youtube.com"]::after {
+a[href*="//*.youtube.com"]::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/youtube.png");
 }
 
