@@ -4,7 +4,7 @@ a[href*="//bilibili.com/"]::after {
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin-left: 6px;
+    /*margin-left: 6px;*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -18,7 +18,7 @@ a[href*="//baidu.com"]::after {
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin-left: 6px;
+    /*margin-left: 6px;*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -32,7 +32,7 @@ a[href*="//youtube.com"]::after {
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin-left: 6px;
+    /*margin-left: 6px;*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
