@@ -9,9 +9,9 @@ a[href^="https://www.bilibili.com/"]::after,
 a[href^="http://www.bilibili.com/"]::after {
     content: "";
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    /*margin-left: 6px;*/
+    width: 21px;
+    height: 21px;
+    margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,9 +28,9 @@ a[href^="https://tieba.baidu.com/"]::after,
 a[href^="http://tieba.baidu.com/"]::after {
     content: "";
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    /*margin-left: 6px;*/
+    width: 21px;
+    height: 21px;
+    margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -45,9 +45,9 @@ a[href^="https://www.youtube.com/"]::after,
 a[href^="http://www.youtube.com/"]::after {
     content: "";
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    /*margin-left: 6px;*/
+    width: 21px;
+    height: 21px;
+    margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
