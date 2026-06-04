@@ -7,8 +7,8 @@ a[href^="https://www.bilibili.com/"]::after,
 a[href^="http://www.bilibili.com/"]::after {
     content: "";
     display: inline-block;
-    width: 21px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
     margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -26,8 +26,8 @@ a[href^="https://tieba.baidu.com/"]::after,
 a[href^="http://tieba.baidu.com/"]::after {
     content: "";
     display: inline-block;
-    width: 21px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
     margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -43,8 +43,8 @@ a[href^="https://www.youtube.com/"]::after,
 a[href^="http://www.youtube.com/"]::after {
     content: "";
     display: inline-block;
-    width: 21px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
     margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -57,8 +57,8 @@ a[href^="https://music.163.com/"]::after,
 a[href^="http://music.163.com/"]::after {
     content: "";
     display: inline-block;
-    width: 21px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
     margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -78,8 +78,8 @@ a[href^="https://www.twitter.com/"]::after,
 a[href^="http://www.twitter.com/"]::after {
     content: "";
     display: inline-block;
-    width: 21px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
     margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -99,8 +99,8 @@ a[href^="https://www.tiktok.com/"]::after,
 a[href^="http://www.tiktok.com/"]::after{
     content: "";
     display: inline-block;
-    width: 21px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
     margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -120,12 +120,32 @@ a[href^="https://www.rednote.com/"]::after,
 a[href^="http://www.rednote.com/"]::after{
     content: "";
     display: inline-block;
-    width: 21px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
     margin-left: 6px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     vertical-align: middle;
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/xhs.png");
+}
+
+
+
+a[href^="https://discord.com/"]::after,
+a[href^="http://discord.com/"]::after,
+a[href^="https://discord.gg/"]::after,
+a[href^="http://discord.gg/"]::after,
+a[href^="https://www.discord.com/"]::after,
+a[href^="http://www.discord.com/"]::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    background-image: url("http://vtuber.wikidot.com/local--files/_icons/discord.png");
 }
