@@ -164,3 +164,21 @@ a[href^="http://music.apple.com/"]::after {
     vertical-align: middle;
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/apple-music.png");
 }
+
+a[href^="https://spotify.com/"]::after,
+a[href^="http://spotify.com/"]::after,
+a[href^="https://open.spotify.com/"]::after,
+a[href^="http://open.spotify.com/"]::after,
+a[href^="https://www.spotify.com/"]::after,
+a[href^="http://www.spotify.com/"]::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    background-image: url("http://vtuber.wikidot.com/local--files/_icons/spotify.png");
+}
