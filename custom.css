@@ -11,7 +11,7 @@
 :root {
     --header-title: "VTuber Wiki";
     --header-subtitle: "虚拟主播中文维基";
-    --rename-option: "删除页面？尝试移到归档delete:页面以代替。";
+    --rename-option: "删除页面？尝试移到deleted:页面以代替。";
     --logo-image: url("http://vtuber.wikidot.com/local--files/home/logo.png") !important;
 
     /* Thread Colors */
@@ -124,16 +124,6 @@ blockquote , .lightblock , .方框块 , .歌词 {
     margin: 1rem 0;
     padding: 0.5rem 1rem;
     border: rgba(var(--text-color),0.4) solid 1.5px;
-}
-
-.歌词 {
-    /*text-indent: 2em;*/
-    border-radius: 8px;
-    line-height: 2;
-}
-
-.歌词 em{
-font-weight: 200;
 }
 
 .styled-quote , .样式块 {
@@ -290,12 +280,6 @@ span.hl-brackets,span.hl-code{color: rgb(var(--text-color));}
     background-color: transparent;
     visibility: visible;
     display: inline-block;
-}
-
-/*表格*/
-
-tr td{
-overflow-x：auto；
 }
 
 /*链接不换行修复*/
@@ -623,25 +607,10 @@ div#odialog-shader.odialog-shader{
     overflow: auto;
 }
 
-/*==图片不是存本站附件区的，左上角显示个链接的图标==*/
-
 @supports selector(:has(*)) {
 
 .scp-image-block, .gallery-grid-box .gallery-item td {
     position: relative;
-}
-
-.scp-image-block::before, .gallery-grid-box .gallery-item td a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25px;
-    height: 25px;
-    background-image: url(https://lostmedia.wikidot.com/local--files/component:link-icon/vaadin_link.png);
-    background-size: cover;
-    filter: contrast(0.5) drop-shadow(0px 0.5px 2px white) drop-shadow(0px -0.5px 2px white) drop-shadow(0.5px 0px 2px white) drop-shadow(-0.5px 2px 0px white) drop-shadow(0px 0px 5px gray);
-    z-index: 3;
 }
 
 .gallery-grid-box .gallery-item td a::before {
