@@ -149,3 +149,18 @@ a[href^="http://www.discord.com/"]::after {
     vertical-align: middle;
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/discord.png");
 }
+
+
+a[href^="https://music.apple.com/"]::after,
+a[href^="http://music.apple.com/"]::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    background-image: url("http://vtuber.wikidot.com/local--files/_icons/apple-music.png");
+}
