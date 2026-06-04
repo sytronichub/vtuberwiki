@@ -1,10 +1,10 @@
 /* 为 bilibili.com 域名添加图标 */
-#page-content a[href^="https://bilibili.com/"]::after,
-#page-content a[href^="http://bilibili.com/"]::after,
-#page-content a[href^="https://space.bilibili.com/"]::after,
-#page-content a[href^="http://space.bilibili.com/"]::after,
-#page-content a[href^="https://www.bilibili.com/"]::after,
-#page-content a[href^="http://www.bilibili.com/"]::after {
+a[href^="https://bilibili.com/"]::after,
+a[href^="http://bilibili.com/"]::after,
+a[href^="https://space.bilibili.com/"]::after,
+a[href^="http://space.bilibili.com/"]::after,
+a[href^="https://www.bilibili.com/"]::after,
+a[href^="http://www.bilibili.com/"]::after {
     content: "";
     display: inline-block;
     width: 20px;
