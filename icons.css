@@ -3,8 +3,6 @@ a[href^="https://bilibili.com/"]::after,
 a[href^="http://bilibili.com/"]::after,
 a[href^="https://space.bilibili.com/"]::after,
 a[href^="http://space.bilibili.com/"]::after,
-a[href^="https://www.bilibili.com"]::after,
-a[href^="http://www.bilibili.com"]::after,
 a[href^="https://www.bilibili.com/"]::after,
 a[href^="http://www.bilibili.com/"]::after {
     content: "";
@@ -55,4 +53,79 @@ a[href^="http://www.youtube.com/"]::after {
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/youtube.png");
 }
 
-/* 没有匹配到的域名不会显示任何图标 */
+a[href^="https://music.163.com/"]::after,
+a[href^="http://music.163.com/"]::after {
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    background-image: url("http://vtuber.wikidot.com/local--files/_icons/wyyyy.png");
+    }
+
+
+a[href^="https://x.com/"]::after,
+a[href^="http://x.com/"]::after,
+a[href^="https://www.x.com/"]::after,
+a[href^="http://www.x.com/"]::after,
+a[href^="https://twitter.com/"]::after,
+a[href^="http://twitter.com/"]::after,
+a[href^="https://www.twitter.com/"]::after,
+a[href^="http://www.twitter.com/"]::after {
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    background-image: url("http://vtuber.wikidot.com/local--files/_icons/x.png");
+}
+
+
+a[href^="https://douyin.com/"]::after,
+a[href^="http://douyin.com/"]::after,
+a[href^="https://www.douyin.com/"]::after,
+a[href^="http://www.douyin.com/"]::after,
+a[href^="https://tiktok.com/"]::after,
+a[href^="http://tiktok.com/"]::after,
+a[href^="https://www.tiktok.com/"]::after,
+a[href^="http://www.tiktok.com/"]::after{
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    background-image: url("http://vtuber.wikidot.com/local--files/_icons/dy-tk.png");
+}
+
+
+a[href^="https://xiaohongshu.com/"]::after,
+a[href^="http://xiaohongshu.com/"]::after,
+a[href^="https://www.xiaohongshu.com/"]::after,
+a[href^="http://www.xiaohongshu.com/"]::after,
+a[href^="https://rednote.com/"]::after,
+a[href^="http://rednote.com/"]::after,
+a[href^="https://www.rednote.com/"]::after,
+a[href^="http://www.rednote.com/"]::after{
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    background-image: url("http://vtuber.wikidot.com/local--files/_icons/xhs.png");
+}
