@@ -182,3 +182,18 @@ a[href^="http://www.spotify.com/"]::after {
     vertical-align: middle;
     background-image: url("http://vtuber.wikidot.com/local--files/_icons/spotify.png");
 }
+
+
+href^="https://y.qq.com/"]::after,
+a[href^="http://y.qq.com/"]::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    background-image: url("http://vtuber.wikidot.com/local--files/_icons/qq-music.png");
+}
