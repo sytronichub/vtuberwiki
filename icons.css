@@ -184,7 +184,7 @@ a[href^="http://www.spotify.com/"]::after {
 }
 
 
-href^="https://y.qq.com/"]::after,
+a[href^="https://y.qq.com/"]::after,
 a[href^="http://y.qq.com/"]::after {
     content: "";
     display: inline-block;
