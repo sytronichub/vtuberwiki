@@ -161,126 +161,8 @@ blockquote , .lightblock , .方框块 , .歌词 {
 --link-color: var(--visited-link-color);
 }
 
-a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *) {
-    display: inline-block;
-    transition: background-color 300ms;
-    color: rgb(var(--text-color));
-    text-decoration: none !important;
-}
-
-a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *) {
-    padding-right: 0.4em;
-}
-
-.collapsible-block {
-    margin: 1em 0;
-}
-
-#toc-action-bar>a {
-    width: 100%;
-}
-
-a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *):hover {
-    color: rgb(var(--text-color));
-}
-
-.collapsible-block-folded a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *)::before,
-.collapsible-block-unfolded-link a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *)::before {
-    margin: 0 0.2em 0 0.4em;
-    content: "▼";
-    color: rgb(var(--text-color));
-    background-color: transparent;
-    visibility: visible;
-    display: inline-block;
-}
-
-.collapsible-block-folded a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *):hover::before,
-.collapsible-block-unfolded-link a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *):hover::before {
-    color: rgb(var(--text-color));
-}
-
-.collapsible-block-folded a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *)::before {
-    animation-name: collapsible-arrow-spin;
-    animation-duration: 0.3s;
-    animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(.32, .38, .39, .94);
-    animation-fill-mode: forwards;
-}
-
-.collapsible-block-unfolded-link a.collapsible-block-link:not(.classic-collap *):not(.styled-collap *)::before {
-    animation-name: collapsible-arrow-spin-back;
-    animation-duration: 0.3s;
-    animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(.32, .38, .39, .94);
-    animation-fill-mode: forwards;
-}
-
-@keyframes collapsible-arrow-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(-90deg);
-    }
-}
-
-@keyframes collapsible-arrow-spin-back {
-    from {
-        transform: rotate(-90deg);
-    }
-
-    to {
-        transform: rotate(0deg);
-    }
-}
-
-.darkblock .styled-collap *{
-    color: rgb(var(--darkblock-text-color)) !important;
-    background-color: rgb(var(--darkblock-background-color)) !important;
-}
-
 /*修暗色版式颜色黑色的问题*/
 span.hl-brackets,span.hl-code{color: rgb(var(--text-color));}
-
-  /*===================== ===*/
- /*======特殊折叠·鬼图组件======*/
-/*========================*/
-.styled-collap .collapsible-block {
-    margin: 0.5rem 0;
-}
-
-.styled-collap a.collapsible-block-link {
-    text-decoration: none;
-    display: block;
-    padding: 0.3rem 0.5rem;
-    background-color: rgb(var(--darkblock-background-color));
-    color: rgb(var(--darkblock-text-color));
-}
-
-.styled-collap .collapsible-block-content {
-    padding: 0.01rem 1rem;
-    background-color: rgb(var(--background-color));
-    border: unset !important;
-    border-top: none;
-}
-
-.styled-collap .collapsible-block-folded a.collapsible-block-link::before {
-    margin: 0 0.2em 0 0.4em;
-    content: "▶";
-    color: rgb(var(--darkblock-text-color));
-    background-color: transparent;
-    display: inline-block;
-}
-
-.styled-collap .collapsible-block-unfolded a.collapsible-block-link::before {
-    margin: 0 0.2em 0 0.4em;
-    content: "▼";
-    color: rgb(var(--darkblock-text-color));
-    background-color: transparent;
-    visibility: visible;
-    display: inline-block;
-}
 
 /*链接不换行修复*/
 
@@ -327,13 +209,7 @@ background-color: orange;
 
 /*======因为我，H_W，色弱，屁都看不清，所以我要强制把这些颜色改明显点======*/
 
-span[style*="color: green"]{
-color: #5cb85c !important;
-}
 
-span[style*="color: red"]{
-color: #ee3131 !important;
-}
 
 /*暂时设定文章内不显示评分*/
 
